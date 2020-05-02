@@ -15,4 +15,8 @@ export class FilamentComponent implements OnInit {
   getFilaments(): Filament[] {
     return this.filamentService.getFilaments();
   }
+
+  getRemainingMaterial(filament: Filament): number {
+    return 0;
+  }
 }

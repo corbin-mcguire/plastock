@@ -8,7 +8,14 @@ import { Filament } from '../types/filament.type';
   styleUrls: ['./filament-grid.component.scss'],
 })
 export class FilamentGridComponent implements OnInit {
-  constructor() {}
+  showAddFilament: boolean;
+  constructor(private filamentService: FilamentService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.showAddFilament = false;
+  }
+
+  addFilament(): void {
+    this.showAddFilament = true;
+  }
 }
