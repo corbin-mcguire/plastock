@@ -1,6 +1,9 @@
 <div class="filament" *ngFor="let filament of getFilaments()">
   <div class="filament-header"></div>
   <div class="filament-info">
-    <span>{{ getRemainingMaterial(filament) }}</span>
+    <h2>{{ filament.type }}</h2>
+    <p>{{ filament.color }}</p>
+    <p>{{ filament.printTemp }}</p>
+    <p>{{ filament.weight }}</p>
   </div>
 </div>

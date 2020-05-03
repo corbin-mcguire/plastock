@@ -5,11 +5,19 @@ import { Filament } from '../types/filament.type';
   providedIn: 'root',
 })
 export class FilamentService {
-  private filaments: Filament[];
+  private filaments: Filament[] = [];
 
   constructor() {}
 
-  addFilament(type: string, color: string, printTemp: number, weight: number) {}
+  addFilament(type: string, color: string, printTemp: number, weight: number) {
+    const newFilament: Filament = {
+      type,
+      color,
+      printTemp,
+      weight,
+    };
+    this.filaments.push(newFilament);
+  }
 
   getFilaments(): Filament[] {
     return this.filaments;
