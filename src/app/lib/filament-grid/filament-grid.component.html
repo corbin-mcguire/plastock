@@ -1,10 +1,5 @@
 <section class="add-filament-container">
-  <input
-    type="button"
-    value="Add Filament"
-    class="add-filament"
-    (click)="toggleAddFilament(showAddFilament)"
-  />
+  <button (click)="toggleAddFilament(showAddFilament)">New Filament</button>
   <div class="new-filament-panel" *ngIf="showAddFilament">
     <label for="type"
       >Type <input type="text" name="type" id="type" [(ngModel)]="filamentType"
@@ -22,13 +17,14 @@
         [(ngModel)]="filamentPrintTemp"
     /></label>
     <label for="weight"
-      ><input
+      >Weight
+      <input
         type="number"
         name="weight"
         id="weight"
         [(ngModel)]="filamentWeight"
     /></label>
-    <input type="button" value="Add" (click)="addFilament()" />
+    <button (click)="addFilament()">Add Filament</button>
   </div>
 </section>
 <section class="filaments">

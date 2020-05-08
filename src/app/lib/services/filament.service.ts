@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Filament } from '../types/filament.type';
+import { Job } from '../types/job.model';
 
 @Injectable({
   providedIn: 'root',
@@ -9,12 +10,15 @@ export class FilamentService {
 
   constructor() {}
 
-  addFilament(type: string, color: string, printTemp: number, weight: number) {
+  addFilament(brand: string, type: string, color: string, printTemp: number, weight: number, diameter: number) {
     const newFilament: Filament = {
+      brand,
       type,
       color,
       printTemp,
       weight,
+      diameter,
+      jobs: new Array<Job>()
     };
     this.filaments.push(newFilament);
   }
@@ -22,6 +26,4 @@ export class FilamentService {
   getFilaments(): Filament[] {
     return this.filaments;
   }
-
-  deleteFilament(filament: Filament): void {}
 }
