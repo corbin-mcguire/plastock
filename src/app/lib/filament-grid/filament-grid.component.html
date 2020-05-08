@@ -1,0 +1,32 @@
+<section class="add-filament-container">
+  <button (click)="toggleAddFilament(showAddFilament)">New Filament</button>
+  <div class="new-filament-panel" *ngIf="showAddFilament">
+    <label for="type"
+      >Type <input type="text" name="type" id="type" [(ngModel)]="filamentType"
+    /></label>
+    <label for="color"
+      >Color
+      <input type="text" name="color" id="color" [(ngModel)]="filamentColor"
+    /></label>
+    <label for="temp"
+      >Print Temp
+      <input
+        type="number"
+        name="temp"
+        id="temp"
+        [(ngModel)]="filamentPrintTemp"
+    /></label>
+    <label for="weight"
+      >Weight
+      <input
+        type="number"
+        name="weight"
+        id="weight"
+        [(ngModel)]="filamentWeight"
+    /></label>
+    <button (click)="addFilament()">Add Filament</button>
+  </div>
+</section>
+<section class="filaments">
+  <app-filament></app-filament>
+</section>
