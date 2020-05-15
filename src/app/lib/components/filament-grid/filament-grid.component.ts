@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FilamentService } from '../services/filament.service';
-import { Filament } from '../types/filament.type';
+import { FilamentService } from '../../services/filament.service';
+import { Filament } from '../../types/filament.type';
 
 @Component({
   selector: 'app-filament-grid',
