@@ -12,4 +12,6 @@ export class PlHeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addNewFilament(): void {}
+
 }

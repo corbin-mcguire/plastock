@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 90vh;
+    font-size: 16px;
+    background-color: slategrey;
+}
+
+main {
+    height: 100%;
+    width: 75%;
+    margin: auto;
+    padding: 1rem;
+    background-color: rgb(231, 231, 231);
+}
