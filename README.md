@@ -1,2 +1,3 @@
-# plastock
-Filament inventory management system for 3D printer filament
+# Plastock
+The filament inventory management software!
+
