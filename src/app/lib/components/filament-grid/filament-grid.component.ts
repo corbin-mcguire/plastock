@@ -7,7 +7,6 @@ import { FilamentService } from '../../services/filament.service';
   styleUrls: ['./filament-grid.component.scss'],
 })
 export class FilamentGridComponent implements OnInit {
-  showAddFilament: boolean;
   filamentBrand: string;
   filamentType: string;
   filamentColor: string;
@@ -15,19 +14,20 @@ export class FilamentGridComponent implements OnInit {
   filamentWeight: number;
   filamentDiameter: number;
 
+  isFilamentFormShown = false;
+
   constructor(private filamentService: FilamentService) {}
 
   ngOnInit(): void {
     this.filamentBrand = '';
-    this.showAddFilament = false;
     this.filamentType = '';
     this.filamentColor = '';
     this.filamentPrintTemp = 0;
     this.filamentWeight = 0;
   }
 
-  toggleAddFilament(show: boolean): void {
-    this.showAddFilament = !show;
+  toggleNewFilamentForm(): void {
+    this.isFilamentFormShown = !this.isFilamentFormShown;
   }
 
   addFilament(): void {
@@ -47,4 +47,6 @@ export class FilamentGridComponent implements OnInit {
     this.filamentDiameter = 0;
 
   }
+  
+  addNewFilament(): void {}
 }
