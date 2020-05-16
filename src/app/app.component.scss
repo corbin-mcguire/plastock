@@ -1,0 +1,48 @@
+@import "./styles/colors";
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "header"
+    "main";
+
+  &>* {
+    border: 1px solid red;
+  }
+
+  .header {
+    grid-area: header;
+    padding: .5rem 1rem;
+  }
+}
+
+.content-container {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "grid grid filament"
+    "grid grid filament";
+  grid-template-columns: auto 1fr;
+
+  &>* {
+    border: 1px solid red;
+  }
+
+  .filament-grid {
+    grid-area: grid;
+  }
+
+  .filament-container {
+    grid-area: filament;
+
+    .add-filament-container {
+      display: flex;
+      flex-direction: column;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: space-between;
+      }
+    }
+  }
+}

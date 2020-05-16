@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'plastock';
+
+  onSubmit(form: NgForm): void {
+    console.log(form);
+  }
+
 }
