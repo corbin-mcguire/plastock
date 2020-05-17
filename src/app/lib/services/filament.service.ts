@@ -9,8 +9,7 @@ export class FilamentService {
 
   constructor() {}
 
-  addFilament(brand: string, type: string, color: string, printTemp: number, weight: number, diameter: number) {
-    const newFilament = new Filament(brand, type, color, printTemp, weight, diameter);
+  addFilament(newFilament: Filament) {
     this.filaments.push(newFilament);
   }
 

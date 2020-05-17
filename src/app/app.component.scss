@@ -2,46 +2,107 @@
 
 .wrapper {
   display: grid;
-  grid-template-areas: "header"
+  grid-template-areas:
+    "header"
     "main";
 
-  &>* {
-    border: 1px solid red;
+  & > * {
+    // border: 1px solid red;
   }
 
   .header {
     grid-area: header;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
+    background-color: $color-primary;
+    color: $font-color;
+
+    h1 {
+      font-weight: 200;
+      letter-spacing: 0.25rem;
+      text-transform: uppercase;
+    }
   }
 }
 
 .content-container {
   grid-area: main;
   display: grid;
-  grid-template-areas: "grid grid filament"
+  grid-template-areas:
+    "grid grid filament"
     "grid grid filament";
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
 
-  &>* {
-    border: 1px solid red;
+  & > * {
+    // border: 1px solid red;
   }
 
   .filament-grid {
     grid-area: grid;
+    padding: 1rem;
+    background-color: $background-color;
+
+    h2 {
+      color: $font-color;
+    }
   }
 
   .filament-container {
     grid-area: filament;
+    background-color: $background-color-darker-1;
+    width: 25rem;
 
     .add-filament-container {
       display: flex;
       flex-direction: column;
+      padding: 1rem;
+      color: $color-primary;
 
       form {
         display: flex;
         flex-direction: column;
         align-items: left;
         justify-content: space-between;
+        padding: 1rem;
+
+        label {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          color: $font-color;
+
+          input {
+            width: 8rem;
+            margin: 0 0 0.5rem 1rem;
+            background-color: lighten($color: $background-color, $amount: 5%);
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem;
+            height: 1.5rem;
+            width: 10rem;
+            color: $font-color;
+
+            &[type="number"] {
+              width: 4rem;
+            }
+          }
+
+          select {
+            width: 6rem;
+          }
+        }
+
+        button {
+          background-color: $color-primary;
+          text-transform: uppercase;
+          height: 2rem;
+          width: 5rem;
+          border: none;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
       }
     }
   }

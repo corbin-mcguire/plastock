@@ -2,35 +2,39 @@
   <header class="header">
     <div class="heading-container">
       <h1 class="heading heading--main">plastock</h1>
-      <h3 class="heading heading--sub">the filament inventory management tool</h3>
     </div>
   </header>
   <main class="content-container">
     <section class="filament-grid">
-      <span>Inventory</span>
+      <h2>Inventory</h2>
       <app-filament-grid></app-filament-grid>
     </section>
     <section class="filament-container">
       <div class="add-filament-container">
-        <span>New Filament</span>
+        <h2>New Filament</h2>
         <form (ngSubmit)="onSubmit(form)" #form="ngForm">
           <label for="brand">
-            Brand <input type="text" name="brand" id="" ngModel>
+            Brand <input type="text" name="brand" id="" required ngModel />
           </label>
           <label for="type">
-            Type <input type="text" name="type" id="" ngModel>
+            Type <input type="text" name="type" id="" required ngModel />
           </label>
           <label for="color">
-            Color <input type="text" name="color" id="" ngModel>
+            Color <input type="text" name="color" id="" required ngModel />
           </label>
           <label for="printTemp">
-            Print Temperature <input type="number" name="printTemp" id="" ngModel>
+            Print Temperature
+            <input type="number" name="printTemp" id="" required ngModel />
           </label>
           <label for="weight">
-            Weight <input type="number" name="weight" id="" ngModel>
+            Weight <input type="number" name="weight" id="" required ngModel />
           </label>
           <label for="diameter">
-            Diameter <input type="number" name="diameter" id="" ngModel>
+            Diameter
+            <select name="diameter" id="" ngModel>
+              <option value="1.75" selected>1.75mm</option>
+              <option value="2.85">2.85mm</option>
+            </select>
           </label>
           <button type="submit">Add</button>
         </form>
