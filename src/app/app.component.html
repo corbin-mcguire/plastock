@@ -2,42 +2,16 @@
   <header class="header">
     <div class="heading-container">
       <h1 class="heading heading--main">plastock</h1>
-      <h3 class="heading heading--sub">the filament inventory management tool</h3>
     </div>
   </header>
   <main class="content-container">
     <section class="filament-grid">
-      <span>Inventory</span>
+      <h2>Inventory</h2>
       <app-filament-grid></app-filament-grid>
     </section>
     <section class="filament-container">
-      <div class="add-filament-container">
-        <span>New Filament</span>
-        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-          <label for="brand">
-            Brand <input type="text" name="brand" id="" ngModel>
-          </label>
-          <label for="type">
-            Type <input type="text" name="type" id="" ngModel>
-          </label>
-          <label for="color">
-            Color <input type="text" name="color" id="" ngModel>
-          </label>
-          <label for="printTemp">
-            Print Temperature <input type="number" name="printTemp" id="" ngModel>
-          </label>
-          <label for="weight">
-            Weight <input type="number" name="weight" id="" ngModel>
-          </label>
-          <label for="diameter">
-            Diameter <input type="number" name="diameter" id="" ngModel>
-          </label>
-          <button type="submit">Add</button>
-        </form>
-      </div>
-      <div class="filament-detail-container">
-        <app-filament-detail></app-filament-detail>
-      </div>
+      <app-add-filament></app-add-filament>
+      <app-filament-detail></app-filament-detail>
     </section>
   </main>
 </div>

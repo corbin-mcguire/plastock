@@ -1,8 +1,39 @@
-$color-primary: #db3b61;
-$color-secondary: #ef3f61;
-$color-tertiary: #3a3a59;
-$color-quaternary: #555574;
+/* HEX */
+$color-primary: #06983fff;
+$color-secondary: #929896ff;
+$background-color: #464749ff;
+$font-color: #f8f8f8ff;
 
-$font-color: #D3D3D3;
-$dark-gray: #A9A9A9;
-$background-color: #43464B;
+$background-color-darker-1: darken(
+  $color: $background-color,
+  $amount: 5%,
+);
+$background-color-darker-2: darken(
+  $color: $background-color,
+  $amount: 10%,
+);
+$background-color-darker-3: darken(
+  $color: $background-color,
+  $amount: 15%,
+);
+$background-color-darker-4: darken(
+  $color: $background-color,
+  $amount: 20%,
+);
+
+$background-color-lighter-1: lighten(
+  $color: $background-color,
+  $amount: 5%,
+);
+$background-color-lighter-2: lighten(
+  $color: $background-color,
+  $amount: 10%,
+);
+$background-color-lighter-3: lighten(
+  $color: $background-color,
+  $amount: 15%,
+);
+$background-color-lighter-4: lighten(
+  $color: $background-color,
+  $amount: 20%,
+);

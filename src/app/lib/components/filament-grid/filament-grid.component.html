@@ -1,3 +1,7 @@
 <section class="filaments">
-  <app-filament></app-filament>
+  <app-filament
+    *ngFor="let filament of getFilaments()"
+    [filament]="filament"
+    (click)="onShowFilamentDetail(filament)"
+  ></app-filament>
 </section>

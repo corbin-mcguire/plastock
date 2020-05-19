@@ -1,1 +1,30 @@
-<p>filament-detail works!</p>
+<div
+  class="filament-detail-container"
+  *ngIf="filamentService.isFilamentDetailShown"
+>
+  <button (click)="closeFilamentDetail()">
+    <fa-icon [icon]="closeIcon"></fa-icon>
+  </button>
+  <table>
+    <tr>
+      <td>Color</td>
+      <td>{{ filament.getColor() }}</td>
+    </tr>
+    <tr>
+      <td>Print Temp</td>
+      <td>{{ filament.getPrintTemp() }}</td>
+    </tr>
+    <tr>
+      <td>Weight</td>
+      <td>{{ filament.getWeight() }}</td>
+    </tr>
+    <tr>
+      <td>Diameter</td>
+      <td>{{ filament.getDiameter() }}</td>
+    </tr>
+    <tr>
+      <td>Remaining</td>
+      <td>{{ filament.getRemainingMaterial() }}</td>
+    </tr>
+  </table>
+</div>

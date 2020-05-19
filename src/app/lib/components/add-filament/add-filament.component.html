@@ -1,0 +1,33 @@
+<div
+  class="add-filament-container"
+  *ngIf="!filamentService.isFilamentDetailShown"
+>
+  <h2>New Filament</h2>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <label for="brand">
+      Brand <input type="text" name="brand" id="brand" required ngModel />
+    </label>
+    <label for="type">
+      Type <input type="text" name="type" id="type" required ngModel />
+    </label>
+    <label for="color">
+      Color <input type="text" name="color" id="color" required ngModel />
+    </label>
+    <label for="printTemp">
+      Print Temperature
+      <input type="number" name="printTemp" id="printTemp" required ngModel />
+    </label>
+    <label for="weight">
+      Weight
+      <input type="number" name="weight" id="weight" required ngModel />
+    </label>
+    <label for="diameter">
+      Diameter
+      <select name="diameter" id="diameter" ngModel>
+        <option value="1.75" selected>1.75mm</option>
+        <option value="2.85">2.85mm</option>
+      </select>
+    </label>
+    <button type="submit">Add</button>
+  </form>
+</div>

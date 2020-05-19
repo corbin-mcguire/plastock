@@ -1,7 +1,11 @@
+import { PrintSettings } from './print-settings.model';
+
 export class Job {
   private id: string;
   private materialCost: number;
   private printTime: number;
+  private printSettings: PrintSettings;
+  private printGcode: string;
 
   constructor(id: string, materialCost: number, printTime: number) {
     this.id = id;

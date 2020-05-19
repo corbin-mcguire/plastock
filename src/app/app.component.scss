@@ -2,47 +2,47 @@
 
 .wrapper {
   display: grid;
-  grid-template-areas: "header"
+  grid-template-areas:
+    "header"
     "main";
-
-  &>* {
-    border: 1px solid red;
-  }
 
   .header {
     grid-area: header;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
+    background-color: $color-primary;
+    color: $font-color;
+
+    h1 {
+      font-weight: 200;
+      letter-spacing: 0.25rem;
+      text-transform: uppercase;
+    }
   }
 }
 
 .content-container {
   grid-area: main;
   display: grid;
-  grid-template-areas: "grid grid filament"
+  grid-template-areas:
+    "grid grid filament"
     "grid grid filament";
-  grid-template-columns: auto 1fr;
-
-  &>* {
-    border: 1px solid red;
-  }
+  grid-template-columns: 1fr auto;
 
   .filament-grid {
     grid-area: grid;
+    padding: 1rem;
+    background-color: $background-color;
+
+    h2 {
+      color: $font-color;
+    }
   }
 
   .filament-container {
     grid-area: filament;
+    background-color: $background-color-darker-1;
+    width: 25rem;
 
-    .add-filament-container {
-      display: flex;
-      flex-direction: column;
-
-      form {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: space-between;
-      }
-    }
+    
   }
 }
