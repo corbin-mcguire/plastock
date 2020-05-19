@@ -1,25 +1,8 @@
-<div class="filament" *ngFor="let filament of getFilaments()">
-  <h2>{{ filament.getBrand() }} {{ filament.getType() }}</h2>
-  <table>
-    <tr>
-      <td>Color</td>
-      <td>{{ filament.getColor() }}</td>
-    </tr>
-    <tr>
-      <td>Print Temp</td>
-      <td>{{ filament.getPrintTemp() }}</td>
-    </tr>
-    <tr>
-      <td>Weight</td>
-      <td>{{ filament.getWeight() }}</td>
-    </tr>
-    <tr>
-      <td>Diameter</td>
-      <td>{{ filament.getDiameter() }}</td>
-    </tr>
-    <tr>
-      <td>Remaining</td>
-      <td>{{ filament.getRemainingMaterial() }}</td>
-    </tr>
-  </table>
+<div class="filament">
+  <button (click)="removeFilament(filament)">
+    <fa-icon [icon]="removeIcon"></fa-icon>
+  </button>
+  <h2>{{ filament.getColor() }} {{ filament.getType() }}</h2>
+  <span>{{ filament.getRemainingMaterial() }}g</span>
+  <span>remaining</span>
 </div>
