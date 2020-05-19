@@ -10,38 +10,8 @@
       <app-filament-grid></app-filament-grid>
     </section>
     <section class="filament-container">
-      <div class="add-filament-container">
-        <h2>New Filament</h2>
-        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-          <label for="brand">
-            Brand <input type="text" name="brand" id="" required ngModel />
-          </label>
-          <label for="type">
-            Type <input type="text" name="type" id="" required ngModel />
-          </label>
-          <label for="color">
-            Color <input type="text" name="color" id="" required ngModel />
-          </label>
-          <label for="printTemp">
-            Print Temperature
-            <input type="number" name="printTemp" id="" required ngModel />
-          </label>
-          <label for="weight">
-            Weight <input type="number" name="weight" id="" required ngModel />
-          </label>
-          <label for="diameter">
-            Diameter
-            <select name="diameter" id="" ngModel>
-              <option value="1.75" selected>1.75mm</option>
-              <option value="2.85">2.85mm</option>
-            </select>
-          </label>
-          <button type="submit">Add</button>
-        </form>
-      </div>
-      <div class="filament-detail-container">
-        <app-filament-detail></app-filament-detail>
-      </div>
+      <app-add-filament></app-add-filament>
+      <app-filament-detail></app-filament-detail>
     </section>
   </main>
 </div>

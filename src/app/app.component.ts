@@ -11,18 +11,5 @@ import { Filament } from './lib/types/filament.model';
 export class AppComponent {
   title = 'plastock';
 
-  constructor(private filamentService: FilamentService) {}
-
-  onSubmit(form: NgForm): void {
-    const newFilament = new Filament(
-      form.value.brand,
-      form.value.type,
-      form.value.color,
-      form.value.printTemp,
-      form.value.weight,
-      form.value.diameter
-    );
-    console.log(newFilament);
-    this.filamentService.addFilament(newFilament);
-  }
+  constructor(public filamentService: FilamentService) {}
 }
