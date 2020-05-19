@@ -17,4 +17,8 @@ export class FilamentGridComponent implements OnInit {
   getFilaments(): Filament[] {
     return this.filamentService.getFilaments();
   }
+
+  onShowFilamentDetail(filament: Filament): void {
+    this.filamentService.filamentDetailSubject.next(filament);
+  }
 }
