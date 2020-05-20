@@ -18,7 +18,7 @@ export class FilamentDetailComponent implements OnInit {
   constructor(public filamentService: FilamentService) {}
 
   ngOnInit(): void {
-    this.filamentService.getFilamentDetailObservable().subscribe((filament) => {
+    this.filamentService.showFilamentDetailListener().subscribe((filament) => {
       this.filament = filament;
       this.filamentService.isFilamentDetailShown = true;
     });

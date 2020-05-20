@@ -14,6 +14,9 @@ export class AddFilamentComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(form: NgForm): void {
+    if (form.invalid) {
+      return;
+    }
     const newFilament = new Filament(
       form.value.brand,
       form.value.type,
@@ -23,5 +26,6 @@ export class AddFilamentComponent implements OnInit {
       form.value.diameter
     );
     this.filamentService.addFilament(newFilament);
+    form.resetForm();
   }
 }

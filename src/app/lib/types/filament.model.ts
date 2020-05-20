@@ -7,16 +7,24 @@
 import { Job } from './job.model';
 
 export class Filament {
-  private brand: string;
-  private type: string;
-  private color: string;
-  private printTemp: number;
-  private weight: number;
-  private diameter: number;
-  private jobs: Job[];
-  private remainingMaterial: number;
+  id: string;
+  brand: string;
+  type: string;
+  color: string;
+  printTemp: number;
+  weight: number;
+  diameter: number;
+  jobs: Job[];
+  remainingMaterial: number;
 
-  constructor(brand: string, type: string, color: string, printTemp: number, weight: number = 1000, diameter: number = 1.75) {
+  constructor(
+    brand: string,
+    type: string,
+    color: string,
+    printTemp: number,
+    weight: number = 1000,
+    diameter: number = 1.75
+  ) {
     this.brand = brand;
     this.type = type;
     this.color = color;
@@ -25,6 +33,7 @@ export class Filament {
     this.diameter = diameter;
     this.jobs = new Array<Job>();
     this.remainingMaterial = weight;
+    this.id = `${brand}_${type}_${color}`;
   }
 
   /**
@@ -84,6 +93,13 @@ export class Filament {
   }
 
   /**
+   * Gets the ID of the filament
+   */
+  getId(): string {
+    return this.id;
+  }
+
+  /**
    * Sets the filament brand
    * @param newBrand the new brand to set
    */
@@ -132,6 +148,14 @@ export class Filament {
   }
 
   /**
+   * Sets the ID for the filament
+   * @param newId new Id to be set
+   */
+  setId(newId: string): void {
+    this.id = newId;
+  }
+
+  /**
    * Adds a new job to the filament's list of jobs
    * @param newJob the new job to add
    */
@@ -158,6 +182,7 @@ export class Filament {
   /**
    * Don't know if this would be needed or not.
    */
-  private getJob(): Job { return null; }
-
+  private getJob(): Job {
+    return null;
+  }
 }
