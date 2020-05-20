@@ -7,6 +7,7 @@ import { FilamentGridComponent } from './lib/components/filament-grid/filament-g
 import { FilamentComponent } from './lib/components/filament/filament.component';
 import { FilamentDetailComponent } from './lib/components/filament-detail/filament-detail.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AddFilamentComponent } from './lib/components/add-filament/add-filament.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -22,12 +23,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap:
-  [
-    AppComponent
-  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

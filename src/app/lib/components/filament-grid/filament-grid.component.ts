@@ -9,16 +9,20 @@ import { Filament } from '../../types/filament.model';
 })
 export class FilamentGridComponent implements OnInit {
   isFilamentFormShown = false;
+  filaments: Filament[] = [];
 
   constructor(private filamentService: FilamentService) {}
 
-  ngOnInit() {}
-
-  getFilaments(): Filament[] {
-    return this.filamentService.getFilaments();
+  ngOnInit() {
+    this.filamentService.getFilaments();
+    this.filamentService
+      .getFilamentUpdateListener()
+      .subscribe((filaments: Filament[]) => {
+        this.filaments = filaments;
+      });
   }
 
   onShowFilamentDetail(filament: Filament): void {
-    this.filamentService.filamentDetailSubject.next(filament);
+    this.filamentService.showFilamentDetail(filament);
   }
 }
