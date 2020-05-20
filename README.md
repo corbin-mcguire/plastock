@@ -22,6 +22,10 @@ To run the application, ensure that you have the Angular CLI installed
 ```bash
 npm install -g @angular/cli
 ```
+Start the Node server
+```bashs
+node server.js
+```
 
 Serve the app
 ```bash
