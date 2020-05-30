@@ -2,7 +2,7 @@
   <button (click)="removeFilament(filament)">
     <fa-icon [icon]="removeIcon"></fa-icon>
   </button>
-  <h2>{{ filament.color }} {{ filament.type }}</h2>
+  <h2>{{ filament.color }} {{ filament.type | uppercase }}</h2>
   <span>{{ filament.remainingMaterial }}g</span>
   <span>remaining</span>
 </div>
