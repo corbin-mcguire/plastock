@@ -1,48 +1,47 @@
-@import "./styles/colors";
+// @import "./styles/colors";
 
-.wrapper {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main";
+// .wrapper {
+//   display: grid;
+//   grid-template-areas:
+//     "header"
+//     "main";
 
-  .header {
-    grid-area: header;
-    padding: 0.5rem 1rem;
-    background-color: $color-primary;
-    color: $font-color;
+//   .header {
+//     grid-area: header;
+//     padding: 0.5rem 1rem;
+//     background-color: $color-primary;
+//     color: $font-color;
 
-    h1 {
-      font-weight: 200;
-      letter-spacing: 0.25rem;
-      text-transform: uppercase;
-    }
-  }
-}
+//     h1 {
+//       font-weight: 200;
+//       letter-spacing: 0.25rem;
+//       text-transform: uppercase;
+//     }
+//   }
+// }
 
-.content-container {
-  grid-area: main;
-  display: grid;
-  grid-template-areas:
-    "grid grid filament"
-    "grid grid filament";
-  grid-template-columns: 1fr auto;
+// .content-container {
+//   grid-area: main;
+//   display: grid;
+//   grid-template-areas:
+//     "grid grid filament"
+//     "grid grid filament";
+//   grid-template-columns: 1fr auto;
 
-  .filament-grid {
-    grid-area: grid;
-    padding: 1rem;
-    background-color: $background-color;
+//   .filament-grid {
+//     grid-area: grid;
+//     padding: 1rem;
+//     background-color: $background-color;
 
-    h2 {
-      color: $font-color;
-    }
-  }
+//     h2 {
+//       color: $font-color;
+//     }
+//   }
 
-  .filament-container {
-    grid-area: filament;
-    background-color: $background-color-darker-1;
-    width: 25rem;
+//   .filament-container {
+//     grid-area: filament;
+//     background-color: $background-color-darker-1;
+//     width: 25rem;
 
-    
-  }
-}
+//   }
+// }
