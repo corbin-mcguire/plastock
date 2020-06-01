@@ -26,7 +26,7 @@ app.post("/api/v1/filaments", (req, res, next) => {
   });
 });
 
-app.get("/api/v1/filaments", (req, res, next) => {
+app.use("/api/v1/filaments", (req, res, next) => {
   const filaments = [
     {
       id: "Inland_PLA_Blue",

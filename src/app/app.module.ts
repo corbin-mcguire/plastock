@@ -10,8 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddFilamentComponent } from './lib/components/add-filament/add-filament.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -27,8 +25,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     FormsModule,
     FontAwesomeModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

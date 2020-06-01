@@ -1,56 +1,56 @@
-// @import "../../../styles/colors";
+@import "../../../styles/colors";
 
-// .add-filament-container {
-//   display: flex;
-//   flex-direction: column;
-//   padding: 1rem;
-//   color: $color-primary;
+.add-filament-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: $color-primary;
 
-//   form {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: left;
-//     justify-content: space-between;
-//     padding: 1rem;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+    padding: 1rem;
 
-//     label {
-//       width: 100%;
-//       display: flex;
-//       justify-content: space-between;
-//       color: $font-color;
+    label {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: $font-color;
 
-//       input {
-//         width: 8rem;
-//         margin: 0 0 0.5rem 1rem;
-//         background-color: lighten($color: $background-color, $amount: 5%);
-//         border: none;
-//         border-radius: 5px;
-//         padding: 0.5rem;
-//         height: 1.5rem;
-//         width: 10rem;
-//         color: $font-color;
+      input {
+        width: 8rem;
+        margin: 0 0 0.5rem 1rem;
+        background-color: lighten($color: $background-color, $amount: 5%);
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem;
+        height: 1.5rem;
+        width: 10rem;
+        color: $font-color;
 
-//         &[type="number"] {
-//           width: 4rem;
-//         }
-//       }
+        &[type="number"] {
+          width: 4rem;
+        }
+      }
 
-//       select {
-//         width: 6rem;
-//       }
-//     }
+      select {
+        width: 6rem;
+      }
+    }
 
-//     button {
-//       background-color: $color-primary;
-//       text-transform: uppercase;
-//       height: 2rem;
-//       width: 5rem;
-//       border: none;
-//       border-radius: 5px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       cursor: pointer;
-//     }
-//   }
-// }
+    button {
+      background-color: $color-primary;
+      text-transform: uppercase;
+      height: 2rem;
+      width: 5rem;
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}

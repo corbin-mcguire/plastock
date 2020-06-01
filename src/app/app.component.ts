@@ -1,5 +1,7 @@
 import { Component, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { FilamentService } from './lib/services/filament.service';
+import { Filament } from './lib/types/filament.model';
 
 @Component({
   selector: 'app-root',
