@@ -18,7 +18,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.post("/api/v1/filaments", (req, res, next) => {
+app.post("/api/v1/filaments/", (req, res, next) => {
   const post = req.body;
   console.log(post);
   res.status(201).json({
@@ -26,7 +26,7 @@ app.post("/api/v1/filaments", (req, res, next) => {
   });
 });
 
-app.use("/api/v1/filaments", (req, res, next) => {
+app.use("/api/v1/filaments/", (req, res, next) => {
   const filaments = [
     {
       id: "Inland_PLA_Blue",
