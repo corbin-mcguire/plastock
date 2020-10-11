@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require("electron");
-const server = require("./server"); // backend
+const server = require("./server"); // node server
 
 let win;
 
@@ -11,7 +11,8 @@ function openWindow() {
 
   win.loadURL(`file://${__dirname}/dist/plastock/index.html`);
 
-  win.webContents.openDevTools();
+  // Uncomment/comment to enable/disable devtools
+  // win.webContents.openDevTools();
 }
 
 app.on("ready", openWindow);

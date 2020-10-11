@@ -17,19 +17,23 @@ Install all the required npm packages
 ```bash
 npm install
 ```
-### Run
+
+### CLI
 To run the application, ensure that you have the Angular CLI installed
 ```bash
 npm install -g @angular/cli
 ```
-Start the Node server
-```bashs
-node server.js
+
+### Build
+Run the following command to build the application for use in Electron. You must rebuild every time you make changes to the codebase to see your changes.
+```bash
+npm run electron-build
 ```
 
-Serve the app
+### Run
+The following command will run the application with Electron. Ensure that you have built the project before.
 ```bash
-ng serve
+npm run electron
 ```
 
 Finally, navigate to `localhost:4200`.
