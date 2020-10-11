@@ -10,8 +10,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "electron .",
-    "electron-build": "ng build --prod",
-    "backend": "node server.js"
+    "electron-build": "ng build --prod"
   },
   "private": true,
   "dependencies": {
