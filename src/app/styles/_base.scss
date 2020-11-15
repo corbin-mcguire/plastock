@@ -5,13 +5,15 @@
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+body {
   box-sizing: border-box;
 }
 
-html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  height: 100vh;
   font-family: Lato, Arial, Helvetica, sans-serif;
+  background: $background-color;
 }
