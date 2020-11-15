@@ -1,8 +1,8 @@
-<div
-  class="add-filament-container"
-  *ngIf="!filamentService.isFilamentDetailShown"
->
-  <h2>New Filament</h2>
+<div class="add-filament-container" *ngIf="show">
+  <button class="close" (click)="closeModal()">
+    <fa-icon [icon]="closeIcon"></fa-icon>
+  </button>
+  <h2>Add Filament</h2>
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <label for="brand">
       Brand <input type="text" name="brand" id="brand" required ngModel />

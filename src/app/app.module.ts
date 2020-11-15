@@ -17,7 +17,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FilamentGridComponent,
     FilamentComponent,
     FilamentDetailComponent,
-    AddFilamentComponent,
+    AddFilamentComponent
   ],
   imports: [
     BrowserModule,

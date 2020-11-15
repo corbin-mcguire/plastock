@@ -1,17 +1,18 @@
-<div class="wrapper">
-  <header class="header">
-    <div class="heading-container">
+  <div class="wrapper" [ngClass]="{'dimmed-background': show}" (click)="checkCloseModal()">
+    <header class="header">
       <h1 class="heading heading--main">plastock</h1>
-    </div>
-  </header>
-  <main class="content-container">
-    <section class="filament-grid">
-      <h2>Inventory</h2>
-      <app-filament-grid></app-filament-grid>
-    </section>
-    <section class="filament-container">
-      <app-add-filament></app-add-filament>
+    </header>
+    <main class="content-container">
+      <section class="filament-grid">
+        <h2>Inventory</h2>
+        <app-filament-grid></app-filament-grid>
+      </section>
       <app-filament-detail></app-filament-detail>
-    </section>
-  </main>
-</div>
+    </main>
+  </div>
+  <app-add-filament [show]="show" (closeEvent)="toggleAddFilament()"></app-add-filament>
+  <div class="add-filament-icon">
+    <button (click)="toggleAddFilament()">
+      <fa-icon [icon]="addIcon"></fa-icon>
+    </button>
+  </div>

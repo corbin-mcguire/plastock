@@ -1,48 +1,60 @@
 @import "./styles/colors";
 
 .wrapper {
+  height: 100%;
+  transition: .5s;
+}
+
+header.header {
+  background-color: $color-primary;
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: .15em;
+    text-align: left;
+    color: #fff;
+    padding-left: 1rem;
+  }
+}
+
+main.content-container {
+  place-items: center;
+  background: white;
+  width: 55%;
+  height: 95%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.add-filament-icon {
+   position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
   display: grid;
-  grid-template-areas:
-    "header"
-    "main";
+  place-items: center;
+  background-color: $color-primary;
 
-  .header {
-    grid-area: header;
-    padding: 0.5rem 1rem;
-    background-color: $color-primary;
-    color: $font-color;
+  button {
+    height: 100%;
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    color: #fff;
 
-    h1 {
-      font-weight: 200;
-      letter-spacing: 0.25rem;
-      text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
     }
   }
 }
 
-.content-container {
-  grid-area: main;
-  display: grid;
-  grid-template-areas:
-    "grid grid filament"
-    "grid grid filament";
-  grid-template-columns: 1fr auto;
-
-  .filament-grid {
-    grid-area: grid;
-    padding: 1rem;
-    background-color: $background-color;
-
-    h2 {
-      color: $font-color;
-    }
-  }
-
-  .filament-container {
-    grid-area: filament;
-    background-color: $background-color-darker-1;
-    width: 25rem;
-
-    
-  }
+.dimmed-background {
+  background: rgb(0, 0, 0);
+  opacity: 0.5;
+  filter: blur(5px);
 }

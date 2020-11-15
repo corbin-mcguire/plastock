@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Filament } from '../../types/filament.model';
 import { FilamentService } from '../../services/filament.service';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-add-filament',
@@ -9,6 +11,11 @@ import { FilamentService } from '../../services/filament.service';
   styleUrls: ['./add-filament.component.scss'],
 })
 export class AddFilamentComponent implements OnInit {
+  @Input() show: boolean;
+  @Output() closeEvent = new EventEmitter();
+
+  closeIcon = faTimes;
+
   constructor(public filamentService: FilamentService) {}
 
   ngOnInit(): void {}
@@ -27,5 +34,9 @@ export class AddFilamentComponent implements OnInit {
     );
     this.filamentService.addFilament(newFilament);
     form.resetForm();
+  }
+
+  closeModal(): void {
+    this.closeEvent.emit();
   }
 }
