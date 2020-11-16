@@ -2,26 +2,69 @@
 
 .add-filament-container {
   height: 50%;
+  max-height: 25rem;
   width: 50%;
+  max-width: 35rem;
   background: white;
   position: absolute;
   margin: auto;
   left: 0;
   right: 0;
   top: 25%;
-  border: 1px solid black;
-  box-shadow: 5px 5px 5px gray;
-  border-radius: 1rem;
-  padding: 1em;
-  transition: .5s ease-in;
+  border-radius: .5rem;
+  padding: 2em;
+  transition: .25s ease-in;
 
-  display: grid;
-  place-items: center;
+  h2 {
+    font-weight: 300;
+    color: $color-primary;
+  }
 
   form {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
+    padding: 2rem 4rem;
+
+    label {
+      margin: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+
+      input {
+        width: 10rem;
+        height: 1.5rem;
+        outline: none;
+        border: none;
+        box-shadow: 0px 1px 0px $color-primary;
+        padding: 0.5em;
+      }
+
+      select {
+        height: 1.5rem;
+      }
+    }
+
+    button {
+      width: 6rem;
+      height: 1.875rem;
+      background: none;
+      border: 1px solid $color-primary;
+      color: $color-primary;
+      outline: none;
+      border-radius: 1em;
+      margin: auto;
+      text-transform: uppercase;
+      transition: .15s ease-in;
+
+      &:hover {
+        cursor: pointer;
+        background: $color-primary;
+        border: none;
+        color: #fff;
+        box-shadow: 2px 2px 5px #000;
+      }
+    }
+
   }
 }
 
@@ -32,10 +75,14 @@
   border: none;
   background: none;
   outline: none;
-  color: red;
-  font-size: 1.25em;
+  color: gray;
+  font-size: 1em;
+  transition: .25s ease;
+  height: 30px;
+  width: 30px;
 
   &:hover {
     cursor: pointer;
+    color: red;
   }
 }

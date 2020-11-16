@@ -3,23 +3,24 @@
     <fa-icon [icon]="closeIcon"></fa-icon>
   </button>
   <h2>Add Filament</h2>
+  <hr>
   <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <label for="brand">
-      Brand <input type="text" name="brand" id="brand" required ngModel />
+      Brand <input type="text" name="brand" id="brand" required ngModel placeholder="Brand"/>
     </label>
     <label for="type">
-      Type <input type="text" name="type" id="type" required ngModel />
+      Type <input type="text" name="type" id="type" required ngModel placeholder="Type"/>
     </label>
     <label for="color">
-      Color <input type="text" name="color" id="color" required ngModel />
+      Color <input type="text" name="color" id="color" required ngModel placeholder="Color"/>
     </label>
     <label for="printTemp">
       Print Temperature
-      <input type="number" name="printTemp" id="printTemp" required ngModel />
+      <input type="number" name="printTemp" id="printTemp" required ngModel placeholder="Print Temperature"/>
     </label>
     <label for="weight">
       Weight
-      <input type="number" name="weight" id="weight" required ngModel />
+      <input type="number" name="weight" id="weight" required ngModel placeholder="Weight"/>
     </label>
     <label for="diameter">
       Diameter

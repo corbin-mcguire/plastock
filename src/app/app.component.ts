@@ -10,7 +10,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'plastock';
-  show = false;
+  show = true;
 
   // Font Awesome Icons
   addIcon = faPlus;
